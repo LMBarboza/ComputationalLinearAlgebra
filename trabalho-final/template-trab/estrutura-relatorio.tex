@@ -1,0 +1,94 @@
+% Programacao Concorrente (ICP-361) (IC/UFRJ)
+% Agosto de 2022
+% Prof.: Silvana Rossetto
+% Trabalho: Implementação de uma aplicação concorrente
+
+\documentclass[14]{article}
+\usepackage{template-latex/sbc-template}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\renewcommand{\refname}{Bibliografia}
+\usepackage{html,color,graphicx}
+\begin{document}
+
+\title{{\em Título do trabalho (problema escolhido)} \\ 
+%{\large Computação Concorrente (ICP-117) --- 2022/1} \\  
+{\em \normalsize nome completo dos membros da equipe (2 alunos)}
+\author{Programação Concorrente (ICP-361) --- 2022/2}
+\address{} 
+\date{}}
+
+\maketitle
+
+\section{Descrição do problema}
+{\em Descrever o problema escolhido: 
+\begin{itemize}
+	\item do que se trata e como deve funcionar {\color{red}(para uma solução sequencial)};
+\item quais são os dados de entrada e qual a saída que deve ser gerada (para uma solução sequencial);
+\item apontar como o problema pode se beneficiar de uma solução concorrente e suas justificativas.
+\end{itemize}
+}
+
+%-----------------------------------------------------------------------
+\section{Projeto e implementação da solução concorrente}
+{\em Descrever o projeto da solução concorrente para o problema: 
+\begin{itemize}
+\item listar as estratégias que podem ser usadas para dividir a tarefa principal entre fluxos
+de execução independentes;
+\item apontar qual estratégia foi escolhida e por qual motivo;		
+\item descrever as principais decisões de implementação adotadas e suas justificativas.
+\end{itemize}
+}
+{\color{red}Não mostrar o código fonte, ele será visto diretamente. 
+O objetivo aqui é descrever e justificar as decisões de projeto e implementação tomadas.}
+
+%-----------------------------------------------------------------------
+\section{Casos de teste}
+{\em Descrever como o programa foi testado:
+\begin{itemize}
+\item descrever o conjunto de casos de teste usados para avaliação da corretude da solução proposta
+(lembrar de variar a dimensão dos dados de entrada e o número de threads usadas).
+\end{itemize}
+}
+{\color{red}Não mostrar as telas de execução, o objetivo aqui é descrever como os testes
+foram feitos e os resultados obtidos.} 
+
+%-----------------------------------------------------------------------
+\section{Avaliação de desempenho}
+{\em Descrever como o ganho de desempenho foi avaliado:
+\begin{itemize}
+\item descrever o conjunto de casos de testes usados para a avaliação de desempenho
+(lembrar de variar a dimensão dos dados de entrada e o número de threads usadas);
+\item descrever a configuração da máquina onde os testes foram realizados (identificação do processador,
+quantidade de núcleos de execução, sistema operacional);
+\item descrever quantas vezes o mesmo caso de teste foi executado e qual medida de tempo
+foi escolhida (por exemplo, repetir a execução ao menos 5 vezes, tomando o menor tempo ou o tempo médio);
+\item mostrar o cálculo da acelaração;
+\item apresentar os resultados obtidos condensados na forma de tabela ou gráfico. 
+\end{itemize}
+}
+{\color{red}Não mostrar as telas de execução, o objetivo aqui é apresentar os resultados
+finais obtidos (tempo de execução e  aceleração).}
+
+%-----------------------------------------------------------------------
+\section{Discussão}
+{\em Apresentar uma análise dos resultados obtidos: 
+\begin{itemize}
+\item discutir se o ganho de desempenho alcançado foi o esperado ou não {\color{red} e por quais motivos};
+\item apresentar possíveis melhorias do programa, se for o caso;
+\item discutir outras questões que forem pertinentes;
+\item descrever dificuldades encontradas para a realização do trabalho, se for o caso.  
+\end{itemize}
+}
+
+%-----------------------------------------------------------------------
+\section{Referências bibliográficas}
+{\em Listar as referências bibliográficas utilizadas.
+}
+
+%-------------------------------------
+%\bibliographystyle{unsrt}
+%\bibliography{../compconc}
+
+%-----------------------------------------------------------
+\end{document}
