@@ -24,6 +24,8 @@ void QR(Matrix *A, Timer *timer, int lvl = 2) {
     LAPACKE_dgeqrf(LAPACK_ROW_MAJOR, A->nRows, A->nCols, A->matrixData,
                    A->nCols, tau);
 
+    LAPACKE_dorgqr(LAPACK_ROW_MAJOR, A->nRows, A->nCols, A->nCols,
+                   A->matrixData, A->nCols, tau);
     timer->end();
     std::cout << "BLAS-2" << std::endl;
 
@@ -34,12 +36,15 @@ void QR(Matrix *A, Timer *timer, int lvl = 2) {
     int nb = 200;
     int ldt = A->nCols;
     double *T = new double[ldt * std::min(A->nRows, A->nCols)];
-    double *work = (double *)LAPACKE_malloc(sizeof(double) * std::max(1, nb) *
-                                            std::max(1, A->nRows));
+    Matrix C(A->nRows, A->nCols);
+
     timer->start();
 
-    LAPACKE_dgeqrt_work(LAPACK_ROW_MAJOR, A->nRows, A->nCols, nb, A->matrixData,
-                        A->nCols, T, ldt, work);
+    LAPACKE_dgeqrt(LAPACK_ROW_MAJOR, A->nRows, A->nCols, nb, A->matrixData,
+                   A->nCols, T, ldt);
+
+    LAPACKE_dgemqrt(LAPACK_ROW_MAJOR, 'L', 'N', A->nRows, A->nCols, A->nCols,
+                    nb, A->matrixData, A->nCols, T, nb, C.matrixData, A->nRows);
 
     timer->end();
     std::cout << "BLAS-3" << std::endl;
