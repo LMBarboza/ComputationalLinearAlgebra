@@ -10,9 +10,9 @@ int main(int argc, char *argv[]) {
   matrix500.fillMatrix();
   matrix1000.fillMatrix();
 
-  matrix250.dumpMatrix("../matrix/matrix250.bin");
-  matrix500.dumpMatrix("../matrix/matrix500.bin");
-  matrix1000.dumpMatrix("../matrix/matrix1000.bin");
+  matrix250.dumpMatrix("matrix/matrix250.bin");
+  matrix500.dumpMatrix("matrix/matrix500.bin");
+  matrix1000.dumpMatrix("matrix/matrix1000.bin");
 
   return 0;
 }
